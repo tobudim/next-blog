@@ -1,0 +1,47 @@
+{
+	"root": true,
+	"settings": {
+		"react": {
+			"version": "detect"
+		}
+	},
+	"env": {
+		"amd": true,
+		"browser": true,
+		"commonjs": true,
+		"es6": true,
+		"node": true
+	},
+	"extends": [
+		"eslint:recommended",
+		"plugin:react/recommended",
+		"plugin:jsx-a11y/recommended",
+		"plugin:prettier/recommended"
+	],
+	"globals": {
+		"Atomics": "readonly",
+		"SharedArrayBuffer": "readonly"
+	},
+	"parserOptions": {
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": 11
+	},
+	"plugins": ["simple-import-sort", "prettier", "react"],
+	"rules": {
+		"prettier/prettier": ["error", {}, { "usePrettierrc": true }],
+		"react/react-in-jsx-scope": "off",
+		"simple-import-sort/sort": "error",
+		"jsx-a11y/anchor-is-valid": [
+			"error",
+			{
+				"components": ["Link"],
+				"specialLink": ["hrefLeft", "hrefRight"],
+				"aspects": ["invalidHref", "preferButton"]
+			}
+		]
+	},
+	"globals": { "React": "writable" }
+}
