@@ -1,33 +1,33 @@
 {
-	"name": "blog",
-	"version": "0.1.0",
-	"private": true,
-	"scripts": {
-		"dev": "next dev",
-		"build": "next build",
-		"start": "next start",
-		"lint": "eslint .",
-		"format": "prettier --write '**/*.{js, jsx, css, md, json}'"
-	},
-	"dependencies": {
-		"next": "9.5.2",
-		"react": "16.13.1",
-		"react-dom": "16.13.1"
-	},
-	"devDependencies": {
-		"eslint": "^7.7.0",
-		"eslint-config-prettier": "^6.11.0",
-		"eslint-plugin-jsx-a11y": "^6.3.1",
-		"eslint-plugin-prettier": "^3.1.4",
-		"eslint-plugin-react": "^7.20.6",
-		"eslint-plugin-react-hooks": "^4.1.0",
-		"eslint-plugin-simple-import-sort": "^5.0.3",
-		"husky": "^4.2.5",
-		"prettier": "^2.0.5"
-	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "npm run lint && npm run format"
-		}
-	}
+  "name": "blog",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint --fix .",
+    "format": "prettier --write '**/*.{js, jsx, css, md, json}'"
+  },
+  "dependencies": {
+    "next": "9.5.2",
+    "react": "16.13.1",
+    "react-dom": "16.13.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.7.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-react-hooks": "^4.1.0",
+    "eslint-plugin-simple-import-sort": "^5.0.3",
+    "husky": "^4.2.5",
+    "prettier": "^2.0.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm run format"
+    }
+  }
 }
