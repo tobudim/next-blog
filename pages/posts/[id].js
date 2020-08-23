@@ -16,17 +16,16 @@ export default function Post({ postData }) {
 export async function getStaticPaths() {
   const paths = getAllPostsIds();
   return {
-		paths,
-		fallback: false 
-	};
+    paths,
+    fallback: false,
+  };
 }
 
 export async function getStaticProps({ params }) {
   const postData = getPostData(params.id);
   return {
-		props: {
-			postData 
-		} 
-	};
+    props: {
+      postData,
+    },
+  };
 }
-
