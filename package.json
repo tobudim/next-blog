@@ -10,6 +10,7 @@
     "format": "prettier --write '**/*.{js, jsx, css, md, json}'"
   },
   "dependencies": {
+    "date-fns": "^2.15.0",
     "gray-matter": "^4.0.2",
     "next": "9.5.2",
     "react": "16.13.1",
