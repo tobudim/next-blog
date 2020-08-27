@@ -7,7 +7,7 @@ import utilStyles from "../../styles/utils.module.css";
 
 export default function Post({ postData }) {
   return (
-    <Layout>
+    <Layout blogPost>
       <Head>
         <title>{postData.title}</title>
       </Head>

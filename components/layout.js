@@ -7,7 +7,7 @@ import styles from "./layout.module.css";
 const name = "Dimitri Bourreau";
 export const siteTitle = "Dimitri Bourreau : Développeur front-end";
 
-export default function Layout({ children, home }) {
+export default function Layout({ children, home, blogIndex, blogPost }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -19,8 +19,12 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
+
       <header className={styles.header}>
-        {home ? (
+        {home & <h1>{name}</h1>}
+
+        {blogIndex &
+        (
           <>
             <img
               src="/images/profile.jpg"
@@ -29,7 +33,10 @@ export default function Layout({ children, home }) {
             />
             <h1 className={utilStyles.heading2Xl}>{name}</h1>
           </>
-        ) : (
+        )}
+
+        {blogPost &
+        (
           <>
             <Link href="/">
               <a>
@@ -48,8 +55,11 @@ export default function Layout({ children, home }) {
           </>
         )}
       </header>
+
       <main>{children}</main>
-      {!home && (
+
+      {blogPost &
+      (
         <div className={styles.backToHome}>
           <Link href="/blog/">
             <a>← Revenir à la liste des articles</a>
