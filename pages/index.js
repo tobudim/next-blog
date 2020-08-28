@@ -1,6 +1,8 @@
 import Layout from "../components/layout";
+import { getHomeIntro } from "../lib/posts";
 
 export default function Home() {
+  const intro = getHomeIntro("homepage-intro");
   return (
     <Layout home>
       <p>
@@ -9,6 +11,7 @@ export default function Home() {
           👨‍💻
         </span>
       </p>
+      {intro}
     </Layout>
   );
 }
