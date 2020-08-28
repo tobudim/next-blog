@@ -16,6 +16,7 @@
 }
 
 .headerHomeImage {
+	margin-top: 15px;
 	width: 8rem;
 	height: 8rem;
 }
@@ -23,3 +24,19 @@
 .backToHome {
 	margin: 3rem 0 0;
 }
+
+.navBar {
+	width: 100%;
+}
+
+.navBar ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 0;
+}
+
+.navBar ul li {
+	list-style: none;
+}
+

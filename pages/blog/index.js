@@ -18,11 +18,8 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
+        <h2>Blog de Dimitri Bourreau</h2>
         <p>Indépendance numérique, programmation et partage.</p>
-        <small className={utilStyles.lightText}>
-          Ce blog, fièrement, ni ne vous traque, ni ne transmet votre visite et
-          ses détails aux GAFAM.
-        </small>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Articles</h2>
@@ -39,6 +36,12 @@ export default function Home({ allPostsData }) {
             </li>
           ))}
         </ul>
+
+        <hr />
+        <small className={utilStyles.lightText}>
+          Ce blog, fièrement, ni ne vous traque, ni ne transmet votre visite et
+          ses détails aux GAFAM.
+        </small>
       </section>
     </Layout>
   );

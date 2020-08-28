@@ -1,19 +1,14 @@
-import Head from "next/head";
-import Link from "next/link";
-
-import Layout, { siteTitle } from "../components/layout";
+import Layout from "../components/layout";
 
 export default function Home() {
   return (
     <Layout home>
-      <Head>
-        <title>{siteTitle}</title>
-      </Head>
-      <section>
-        <Link href="/blog">
-          <a>Blog</a>
-        </Link>
-      </section>
+      <p>
+        Développeur front-end Node.js, React.js et Vue.js.{" "}
+        <span role="img" aria-label="developer">
+          👨‍💻
+        </span>
+      </p>
     </Layout>
   );
 }

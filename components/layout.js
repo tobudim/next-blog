@@ -7,7 +7,7 @@ import styles from "./layout.module.css";
 const name = "Dimitri Bourreau";
 export const siteTitle = "Dimitri Bourreau : Développeur front-end";
 
-export default function Layout({ children, home, blogIndex, blogPost }) {
+export default function Layout({ children, home, blogPost }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -21,45 +21,41 @@ export default function Layout({ children, home, blogIndex, blogPost }) {
       </Head>
 
       <header className={styles.header}>
-        {home & <h1>{name}</h1>}
+        <nav className={styles.navBar}>
+          <ul>
+            <li>
+              <Link href="/">
+                <a>Dimitri Bourreau</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/blog">
+                <a>Blog</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/contact">
+                <a>Contact</a>
+              </Link>
+            </li>
+          </ul>
+        </nav>
 
-        {blogIndex &
-        (
+        {home && (
           <>
             <img
               src="/images/profile.jpg"
               className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
               alt={name}
             />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
-          </>
-        )}
-
-        {blogPost &
-        (
-          <>
-            <Link href="/">
-              <a>
-                <img
-                  src="/images/profile.jpg"
-                  className={`${styles.headerImage} ${utilStyles.borderCircle}`}
-                  alt={name}
-                />
-              </a>
-            </Link>
-            <h2 className={utilStyles.headingLg}>
-              <Link href="/">
-                <a className={utilStyles.colorInherit}>{name}</a>
-              </Link>
-            </h2>
+            <h2>Dimitri : développeur Bordelais</h2>
           </>
         )}
       </header>
 
       <main>{children}</main>
 
-      {blogPost &
-      (
+      {blogPost && (
         <div className={styles.backToHome}>
           <Link href="/blog/">
             <a>← Revenir à la liste des articles</a>
