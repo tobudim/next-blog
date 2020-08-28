@@ -27,17 +27,21 @@ export default function Home({ allPostsData }) {
           {allPostsData.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
               <Link href="/blog/[id]" as={`/blog/${id}`}>
-                <a>{title}</a>
+                <a>
+                  {title}
+                  <small
+                    className={utilStyles.lightText}
+                    style={{ marginLeft: "15px" }}
+                  >
+                    <Date dateString={date} />
+                  </small>
+                </a>
               </Link>
-              <br />
-              <small className={utilStyles.lightText}>
-                <Date dateString={date} />
-              </small>
             </li>
           ))}
         </ul>
 
-        <hr />
+        <hr className={utilStyles.divider} />
         <small className={utilStyles.lightText}>
           Ce blog, fièrement, ni ne vous traque, ni ne transmet votre visite et
           ses détails aux GAFAM.

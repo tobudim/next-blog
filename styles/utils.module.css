@@ -45,10 +45,13 @@
 }
 
 .listItem {
-  margin: 0 0 1.25rem;
+	margin: 0 0 5px 0;
 }
 
 .lightText {
   color: #999;
 }
 
+.divider {
+	margin: 35px 0;
+}
