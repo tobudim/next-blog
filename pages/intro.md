@@ -1,16 +1,3 @@
-### Technologies 🛠
+Je suis un dev simple et curieux, qui s'est fait un petit site avec Next.js pour partager des idées sur un blog fait maison.
 
-#### Front-end
-
-- React.js
-- Vue.js
-- JavaScript ES6
-- jQuery
-- UI - UX
-- HTML5 - CSS3 _(SASS, LESS)_ - Responsive design
-- Bootstrap
-
-#### Back-end
-
-- Node.js (Express, MongoDB)
-- Administration Linux - Bash 🐧
+_C'est minimaliste par ici, c'est rapide, efficace, et ça fait du bien dans un Internet qui le mérite._

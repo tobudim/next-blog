@@ -1,0 +1,10 @@
+.contactList {
+	margin-top: 30px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.contactList li a img {
+	max-width: 120px;
+}

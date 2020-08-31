@@ -1,0 +1,10 @@
+.postContent a {
+  color: #f5ab87;
+  text-decoration: none;
+	border-bottom: 5px solid transparent;
+	transition: 0.3s;
+}
+
+.postContent a:hover {
+	border-bottom: 3px solid #fbd0bb;
+}

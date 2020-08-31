@@ -3,6 +3,7 @@ import Head from "next/head";
 import Date from "../../components/date";
 import Layout from "../../components/layout";
 import { getAllPostsIds, getPostData } from "../../lib/posts";
+import postStyles from "../../styles/blogPost.module.css";
 import utilStyles from "../../styles/utils.module.css";
 
 export default function Post({ postData }) {
@@ -16,7 +17,10 @@ export default function Post({ postData }) {
         <div className={utilStyles.lightText}>
           <Date dateString={postData.date} />
         </div>
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        <div
+          className={postStyles.postContent}
+          dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+        />
       </article>
     </Layout>
   );
