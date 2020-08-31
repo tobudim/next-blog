@@ -1,17 +1,19 @@
 import Layout from "../components/layout";
-import { getHomeIntro } from "../lib/posts";
+import { getPostData } from "../lib/posts";
 
-export default function Home() {
-  const intro = getHomeIntro("homepage-intro");
+export async function getStaticProps() {
+  const intro = await getPostData("intro");
+  return {
+    props: {
+      intro,
+    },
+  };
+}
+
+export default function Home({ intro }) {
   return (
     <Layout home>
-      <p>
-        Développeur front-end Node.js, React.js et Vue.js.{" "}
-        <span role="img" aria-label="developer">
-          👨‍💻
-        </span>
-      </p>
-      {intro}
+      <div dangerouslySetInnerHTML={{ __html: intro.contentHtml }} />
     </Layout>
   );
 }
