@@ -24,7 +24,6 @@ export default function Home({ yearSortedPosts }) {
       </section>
 
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Articles</h2>
         {Object.keys(yearSortedPosts).map((year) => (
           <>
             <h3>{year}</h3>
