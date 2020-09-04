@@ -1,6 +1,6 @@
 ---
-title: "Git, un peu plus en profondeur"
-date: "2020-09-04"
+title: "Optimiser VS Code"
+date: "2020-09-02"
 ---
 
 J'en ai vraiment, mais vraiment hein, vraiment marre de tous ces articles et vidéos qui pullulent sur Internet où un dev junior, voir ultra-junior, vient nous sortir sa science en nous enseignant des choses ultra-basiques blindé au SEO fatigué et sans imagination. dev.to et LinkedIn sont deux bonnes grosses crevasses abyssales de l'humanité dans ce domaine.
