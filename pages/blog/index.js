@@ -8,7 +8,6 @@ import utilStyles from "../../styles/utils.module.css";
 
 export async function getStaticProps() {
   const yearSortedPosts = getSortedPostsData(true);
-  console.log("yearSortedPosts:", yearSortedPosts);
   return { props: { yearSortedPosts } };
 }
 
