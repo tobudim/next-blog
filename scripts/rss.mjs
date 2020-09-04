@@ -5,7 +5,7 @@ import { getSortedPostsData } from "../lib/posts.js";
 
 Rss();
 
-export default function Rss(req, res) {
+export default function Rss() {
   const xmlRss = getXml();
   return fs.writeFileSync(
     path.join(__dirname, "..", "public", "feed.xml"),
