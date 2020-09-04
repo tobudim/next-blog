@@ -8,6 +8,7 @@ import utilStyles from "../../styles/utils.module.css";
 
 export async function getStaticProps() {
   const yearSortedPosts = getSortedPostsData(true);
+  console.log("yearSortedPosts:", yearSortedPosts);
   return { props: { yearSortedPosts } };
 }
 
@@ -23,9 +24,9 @@ export default function Home({ yearSortedPosts }) {
         <p>Indépendance numérique, programmation et partage.</p>
       </section>
 
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+      <section className={`${utilStyles.headingMùd} ${utilStyles.padding1px}`}>
         {Object.keys(yearSortedPosts).map((year) => (
-          <>
+          <div key={year}>
             <h3>{year}</h3>
             <ul className={utilStyles.list}>
               {yearSortedPosts[year].map(({ id, date, title }) => (
@@ -44,7 +45,7 @@ export default function Home({ yearSortedPosts }) {
                 </li>
               ))}
             </ul>
-          </>
+          </div>
         ))}
         <hr className={utilStyles.divider} />
         <small className={utilStyles.lightText}>
