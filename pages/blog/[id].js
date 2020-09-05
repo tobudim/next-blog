@@ -4,6 +4,7 @@ import Date from "../../components/date";
 import Layout from "../../components/layout";
 import { getAllPostsIds, getPostData } from "../../lib/posts";
 import postStyles from "../../styles/blogPost.module.css";
+import { markdownBody } from "../../styles/markdown.module.css";
 import utilStyles from "../../styles/utils.module.css";
 
 export default function Post({ postData }) {
@@ -18,7 +19,7 @@ export default function Post({ postData }) {
           <Date dateString={postData.date} />
         </div>
         <div
-          className={postStyles.postContent}
+          className={`${postStyles.postContent} ${markdownBody}`}
           dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
         />
       </article>
