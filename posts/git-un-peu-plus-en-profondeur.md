@@ -58,4 +58,6 @@ git log -2 -- README.md
 git diff --cached
 # Dernier commit / Répertoire de travail
 git diff HEAD
+# Dernier commit / Son parent
+git diff HEAD^1..HEAD
 ```
