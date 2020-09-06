@@ -76,22 +76,37 @@ Les plugins sont très importants quand VS Code nativement se veut plus timide q
 
 ### Mes préférés
 
-- [GitLens — Git supercharged](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) : affiche directement dans le fichier des données de versionning comme le dernier auteur de la ligne actuelle et le dernier commit et sa date.
-- [Hop Light](https://marketplace.visualstudio.com/items?itemName=bubersson.theme-hop-light) : le thème de la capture d'écran plus haut.
-- [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme) : les icônes de la capture d'écran plus haut.
-- [Wrap Console Log](https://marketplace.visualstudio.com/items?itemName=midnightsyntax.vscode-wrap-console-log) : permet de logger facilement, il vaut mieux aller voir les raccourcis clavier pour vraiment profiter du plugin.
-- [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag) : modifier un tag HTML/XML modifie son autre paire automatiquement.
-- [React Snippet](https://marketplace.visualstudio.com/items?itemName=NicholasHsiang.vscode-react-snippet)
+[GitLens — Git supercharged](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) : affiche directement dans le fichier des données de versionning comme le dernier auteur de la ligne actuelle et le dernier commit et sa date.
+
+![GitLens](/images/blog/vscode-gitlens.png "GitLens")
+
+[Hop Light](https://marketplace.visualstudio.com/items?itemName=bubersson.theme-hop-light) : le thème de la capture d'écran plus haut.
+
+[Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme) : des icônes toutes belles.
+
+![Material Icon](/images/blog/vscode-icons.png "Material Icon")
+
+[Wrap Console Log](https://marketplace.visualstudio.com/items?itemName=midnightsyntax.vscode-wrap-console-log) : permet de logger facilement, il vaut mieux aller voir les raccourcis clavier pour vraiment profiter du plugin.
+
+[Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag) : modifier un tag HTML/XML modifie son autre paire automatiquement.
+
+[React Snippet](https://marketplace.visualstudio.com/items?itemName=NicholasHsiang.vscode-react-snippet)
 
 ### Les autres, mais ils restent cools !
 
-- [CSS Peek](https://marketplace.visualstudio.com/items?itemName=pranaygp.vscode-css-peek) : permet depuis un fichier HTML/EJS d'accéder au CSS concerné en cliquant sur un _class_ ou _id_.
-- [Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome)
-- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-- [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-- [GitHub Pull Requests and Issues](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github) : permet d'avoir un coup d'oeil rapidement sur les PR et issues en cours.
-- [indent-rainbow](https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow) : permet de mieux y voir dans les indentations grâce à un coloriage.
-- [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur) : boîte à outils très pratique pour dev avec Vue.js (syntax-highlight, snippets, emmet, linting etc).
+[CSS Peek](https://marketplace.visualstudio.com/items?itemName=pranaygp.vscode-css-peek) : permet depuis un fichier HTML/EJS d'accéder au CSS concerné en cliquant sur un _class_ ou _id_.
+
+[Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome)
+
+[ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+
+[Prettier Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+
+[GitHub Pull Requests and Issues](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github) : permet d'avoir un coup d'oeil rapidement sur les PR et issues en cours.
+
+[indent-rainbow](https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow) : permet de mieux y voir dans les indentations grâce à un coloriage.
+
+[Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur) : boîte à outils très pratique pour dev avec Vue.js (syntax-highlight, snippets, emmet, linting etc).
 
 ## Raccourcis clavier
 
