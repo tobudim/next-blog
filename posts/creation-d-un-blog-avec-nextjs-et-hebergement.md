@@ -13,6 +13,8 @@ Les temps ont changé, Internet est devenu le centre de gravité de l'éthique d
 
 J'ai envie de créer un petit blog, humble et utile. Faire tourner tout un Wordpress pour si peu serait dommage ! Tout ce dont j'ai envie, c'est balancer en ligne des idées, et le faire sans pister mes lecteurs. Et puis j'aimerais que ce soit rapide et minimaliste : pas besoin de suivre combien consultent mon blog, pas besoin de commentaires à mes articles. Juste des idées.
 
+> [Le code source de ce blog est disponible sur GitHub](https://signal.eu.org/blog/2020/07/15/la-sobriete-numerique-oui-mais-pour-quoi-faire/).
+
 ## De quoi ai-je besoin ?
 
 - Rédiger des articles en MarkDown et les mettre en ligne facilement.
@@ -101,12 +103,7 @@ D'habitude j'utilise [Namecheap](https://www.namecheap.com/) pour mes noms de do
 
 Pensez bien, si c'est votre première fois avec un VPS, à lire les pages de OVH partagées un peu plus haut. C'est important de sécuriser votre serveur !
 
-Dans tous les cas, il ne faut pas grand chose pour rendre le site disponible :
-
-- Lier le nom de domaine à l'IP du VPS.
-- Configurer le pare-feu.
-- Configurer nginx.
-- Build le projet et l'uploader sur le VPS.
+Pour utiliser le protocole HTTPS, je passe directement par OVH qui [propose de tout gérer pour nous](https://www.ovh.com/fr/ssl-gateway/).
 
 ## Améliorations
 
