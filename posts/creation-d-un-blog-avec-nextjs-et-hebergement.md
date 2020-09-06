@@ -1,5 +1,5 @@
 ---
-title: "La création de mon blog minimaliste avec Next.js"
+title: "Création d'un blog avec Next.js et hébergement"
 date: "2020-09-01"
 ---
 
