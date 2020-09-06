@@ -28,13 +28,15 @@ De quoi n'ai-je pas besoin, du moins aujourd'hui ?
 
 Et pour un peu plus tard je garde la génération d'un flux RSS.
 
-## Template
+## Code source
 
-Si mes besoins vous conviennent vous pouvez retrouver mon [template simple et minimaliste sur mon GitHub](https://github.com/tobudim).
+Si mes besoins vous conviennent vous pouvez retrouver [le code source de ce blog sur GitHub](https://github.com/tobudim).
+
+Ce code sera amené à évoluer, quand j'aurais le temps et l'envie.
 
 ## Fonctionnement
 
-Pour résumer, dans `/posts` je rédige des fichiers .mk dans lesquels je précise le title et la date comme ainsi :
+Je rédige tous mes articles de blog en Markdown, et je les place tous dans `/posts`. Tous ces articles commencent en précisant le _title_ et la _date_ :
 
 ```mk
 ---
@@ -43,9 +45,11 @@ date: "2020-01-02"
 ---
 ```
 
-Je n'ai qu'à récupérer (comme [un excellent tutoriel](https://nextjs.org/learn/basics/create-nextjs-app?utm_source=next-site&utm_medium=nav-cta&utm_campaign=next-website) le fait) leur titre pour en afficher une liste.
+Je récupère (comme [un excellent tutoriel](https://nextjs.org/learn/basics/create-nextjs-app?utm_source=next-site&utm_medium=nav-cta&utm_campaign=next-website) le fait) tous les noms des fichiers dans `/posts`.
 
 ```js
+const postsDirectory = path.join(process.cwd(), "posts");
+
 export function getAllPostsIds() {
   const fileNames = fs.readdirSync(postsDirectory);
   return fileNames.map((fileName) => {
@@ -56,6 +60,28 @@ export function getAllPostsIds() {
     };
   });
 }
+```
+
+Je lis pour chaque fichier le titre et la date, grâce auxquels je peux afficher une liste d'articles.
+
+```js
+<ul className={utilStyles.list}>
+  {yearSortedPosts[year].map(({ id, date, title }) => (
+    <li className={utilStyles.listItem} key={id}>
+      <Link href="/blog/[id]" as={`/blog/${id}`}>
+        <a>
+          {title}
+          <small
+            className={utilStyles.lightText}
+            style={{ marginLeft: "15px" }}
+          >
+            <Date dateString={date} />
+          </small>
+        </a>
+      </Link>
+    </li>
+  ))}
+</ul>
 ```
 
 ## Hébergement
@@ -71,9 +97,16 @@ Concernant l'administration de votre VPS, si vous débutez vraiment et que ça v
 
 D'habitude j'utilise [Namecheap](https://www.namecheap.com/) pour mes noms de domaine, mais je voulais essayer [OVH](https://www.ovh.com/fr/domaines/) pour ce coup-ci et c'est tout aussi simple, en plus de laisser mon argent en France.
 
-## HTTPS et nginx
+## Administration serveur
 
---
+Pensez bien, si c'est votre première fois avec un VPS, à lire les pages de OVH partagées un peu plus haut. C'est important de sécuriser votre serveur !
+
+Dans tous les cas, il ne faut pas grand chose pour rendre le site disponible :
+
+- Lier le nom de domaine à l'IP du VPS.
+- Configurer le pare-feu.
+- Configurer nginx.
+- Build le projet et l'uploader sur le VPS.
 
 ## Améliorations
 
