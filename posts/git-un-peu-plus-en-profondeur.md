@@ -17,6 +17,7 @@ Je ne couvre pas les éléments élémentaires de Git ici, il faut déjà avoir 
 
 - [A successful Git branching model - Vincent Driessen](https://nvie.com/posts/a-successful-git-branching-model/)
 - [Logiciel Tower : gestion des dépôts git](https://www.git-tower.com/windows)
+- [Alias intéressants proposés par Samuel Dauzon](https://github.com/SamuelDauzon/GitTools/blob/master/alias.txt)
 
 ## Configuration
 
@@ -47,6 +48,24 @@ git config  --global conflictStyle = diff3
 git config --global merge.conflictstyle diff3
 ```
 
+### Modifier les alias
+
+```
+git config --global --edit
+```
+
+### Quelques idée d'alias
+
+Samuel Dauzon a proposé [beaucoup d'alias intéressants via un repo disponible sur GitHub](https://github.com/SamuelDauzon/GitTools/blob/master/alias.txt), en voici une petite sélection :
+
+- **git aa** : `git add --all`.
+- **git bv** : `git branch -vv` pour afficher les branches avec le hash et le message du dernier commit, avec la branche distante suivie.
+- **git cb** : `git checkout -b` pour créer et se déplacer dans une nouvelle branche à partir de l'actuelle.
+- **git cmf** : `git commit -a --amend -C HEAD` pour modifier le dernier commit en y ajoutant les dernières modifications tout en conservant le message du commit (ne concerne que les fichiers déjà suivis via l'index).
+- **git co** : `git checkout`.
+- **git st** : `git status --short --branch` pour avoir un affichage simplifié du statut (un fichier = une ligne).
+- **git pu** : `git push --tags` pour pusher les commits ainsi que les tags, souvent oubliés.
+
 ## Commits et tags
 
 ### Filtrer les commits
@@ -68,6 +87,12 @@ git commit --amend --no-edit
 git commit -m "Un commit" --ammend
 ```
 
+### Supprimer / Inverser un commit
+
+```
+git revert commit-hash
+```
+
 ### Voir les différences entre le dernier commit et le travail actuel
 
 ```
@@ -80,6 +105,59 @@ git diff HEAD
 # Dernier commit / Son parent
 git diff HEAD^1..HEAD
 ```
+
+### Annoter un commit
+
+```
+git notes add commit-hash
+git notes add commit-hash -m "message"
+```
+
+### Chercher un texte / regex dans les commits
+
+```
+git log -S "texte/regex"
+```
+
+### Afficher les fichiers en conflit suite à un merge
+
+```
+git diff --check
+```
+
+### Afficher les notes
+
+```
+git notes list
+
+# Autre manière plus lisible
+git log --show-notes
+
+# Afficher les notes d'un commit précis
+git notes show commit-hash
+```
+
+### Modifier une note
+
+```
+git notes edit commit-hash
+
+# Ajouter du contenu à une note
+git notes append commit-hash
+
+# Supprimer une note
+git notes remove commit-hash
+```
+
+### Pusher les notes
+
+Ajouter un alias :
+
+```
+pushnotes = "!f() {git push \"$1\" refs/notes/*:refs/notes/*;}; f"
+```
+
+Ensuite, utiliser `git pushnotes`.
 
 ### Afficher les tags
 
@@ -123,6 +201,16 @@ Positionné sur la branche en question, `git push` est censé fonctionner. Cepen
 
 ```
 git push --set-upstream origin nom-branche
+```
+
+### Supprimer une branche
+
+```
+# Localement
+git branch -d nom-branche
+
+# Branche remote
+git push origin --delete nom-branche
 ```
 
 ## Modifier le travail
