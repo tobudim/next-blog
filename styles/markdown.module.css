@@ -480,7 +480,7 @@
 }
 
 .markdownBody > :first-child {
-  margin-top: 0 !important;
+  margin-top: 20px !important;
 }
 
 .markdownBody > :last-child {
@@ -540,6 +540,7 @@
 
 .markdownBody h1 {
   font-size: 2em;
+  margin-top: 30px;
 }
 
 .markdownBody h1,
@@ -550,6 +551,7 @@
 
 .markdownBody h2 {
   font-size: 1.5em;
+  margin-top: 50px;
 }
 
 .markdownBody h3 {
