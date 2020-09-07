@@ -1,13 +1,13 @@
 import Head from "next/head";
 import Link from "next/link";
 
-import Layout, { siteTitle } from "../components/layout";
+import Layout from "../components/layout";
 
 export default function Custom404() {
   return (
     <Layout>
       <Head>
-        <title>{siteTitle}</title>
+        <title>404 - Page inconnue</title>
       </Head>
       <h1>404 - Page inconnue</h1>
       <Link href="/">
