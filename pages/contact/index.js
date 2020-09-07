@@ -1,3 +1,5 @@
+import Head from "next/head";
+
 import Layout from "../../components/layout";
 import contactStyles from "../../styles/contact.module.css";
 import utilsStyles from "../../styles/utils.module.css";
@@ -5,6 +7,10 @@ import utilsStyles from "../../styles/utils.module.css";
 export default function Contact() {
   return (
     <Layout contact>
+      <Head>
+        <title>Dimitri Bourreau : Contact</title>
+      </Head>
+
       <h1>Contact</h1>
 
       <p>Vous pouvez me joindre en passant par ici :</p>

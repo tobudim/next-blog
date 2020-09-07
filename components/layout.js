@@ -5,7 +5,6 @@ import utilStyles from "../styles/utils.module.css";
 import styles from "./layout.module.css";
 
 const name = "Dimitri Bourreau";
-export const siteTitle = "Dimitri Bourreau : Développeur front-end";
 
 export default function Layout({ children, home, blogPost }) {
   return (
@@ -16,7 +15,10 @@ export default function Layout({ children, home, blogPost }) {
           name="description"
           content="Dimitri Bourreau : développeur front-end"
         />
-        <meta name="og:title" content={siteTitle} />
+        <meta
+          name="og:title"
+          content="Dimitri Bourreau : Développeur front-end"
+        />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
