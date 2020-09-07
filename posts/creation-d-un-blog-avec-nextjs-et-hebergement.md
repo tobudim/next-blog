@@ -105,6 +105,12 @@ Pensez bien, si c'est votre première fois avec un VPS, à lire les pages de OVH
 
 Pour utiliser le protocole HTTPS, je passe directement par OVH qui [propose de tout gérer pour nous](https://www.ovh.com/fr/ssl-gateway/).
 
+Côté administration, j'ai :
+
+- Désactivé la connexion SSH par mot de passe.
+- Désactivé la connexion root.
+- Installé fail2ban, nodejs, npm, pm2 et nginx.
+
 ## Améliorations
 
 Je réalise ce site un peu dans l'urgence pour montrer un peu de mes compétences. Des mises à jour sont à prévoir :
