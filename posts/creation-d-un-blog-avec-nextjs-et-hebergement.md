@@ -38,6 +38,8 @@ Ce code sera amené à évoluer, quand j'aurais le temps et l'envie.
 
 ## Fonctionnement
 
+Voici [un excellent tutoriel](https://nextjs.org/learn/basics/create-nextjs-app?utm_source=next-site&utm_medium=nav-cta&utm_campaign=next-website) si vous voulez apprendre Next.js.
+
 Je rédige tous mes articles de blog en Markdown, et je les place tous dans `/posts`. Tous ces articles commencent en précisant le _title_ et la _date_ :
 
 ```mk
@@ -47,7 +49,7 @@ date: "2020-01-02"
 ---
 ```
 
-Je récupère (comme [un excellent tutoriel](https://nextjs.org/learn/basics/create-nextjs-app?utm_source=next-site&utm_medium=nav-cta&utm_campaign=next-website) le fait) tous les noms des fichiers dans `/posts`.
+Je récupère tous les noms des fichiers dans `/posts`.
 
 ```js
 const postsDirectory = path.join(process.cwd(), "posts");
@@ -101,15 +103,27 @@ D'habitude j'utilise [Namecheap](https://www.namecheap.com/) pour mes noms de do
 
 ## Administration serveur
 
-Pensez bien, si c'est votre première fois avec un VPS, à lire les pages de OVH partagées un peu plus haut. C'est important de sécuriser votre serveur !
+Pensez bien, si c'est votre première fois avec un VPS, à lire les pages de OVH partagées un peu plus haut. C'est important de sécuriser votre serveur ! Grâce à cette aide vous pourrez désactiver la connexion SSH par mot de passe, désactiver la connexion root, et paramétrer votre pare-feu (`ufw` avec Ubuntu).
 
 Pour utiliser le protocole HTTPS, je passe directement par OVH qui [propose de tout gérer pour nous](https://www.ovh.com/fr/ssl-gateway/).
 
-Côté administration, j'ai :
+Quelques mises à jour et installations avant de continuer :
 
-- Désactivé la connexion SSH par mot de passe.
-- Désactivé la connexion root.
-- Installé fail2ban, nodejs, npm, pm2 et nginx.
+```
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt install fail2ban nodejs npm nginx
+npm i -g pm2
+```
+
+Je n'ai pas modifié le fichier de configuration de fail2ban, n'hésitez pas à lire leur doc si vous ne connaissez pas !
+
+Enfin, pour lancer notre serveur avec pm2 :
+
+```
+pm2 start npm -- start
+pm2 startup
+```
 
 ## Améliorations
 
