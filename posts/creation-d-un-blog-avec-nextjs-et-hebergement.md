@@ -34,7 +34,7 @@ Et pour un peu plus tard je garde la génération d'un flux RSS.
 
 Si mes besoins vous conviennent vous pouvez retrouver [le code source de ce blog sur GitHub](https://github.com/tobudim).
 
-Ce code sera amené à évoluer, quand j'aurais le temps et l'envie.
+Ce code sera amené à évoluer, quand j'aurais le temps et l'envie. 👨‍💻
 
 ## Fonctionnement
 
@@ -99,24 +99,26 @@ Concernant l'administration de votre VPS, si vous débutez vraiment et que ça v
 
 ## Nom de domaine
 
-D'habitude j'utilise [Namecheap](https://www.namecheap.com/) pour mes noms de domaine, mais je voulais essayer [OVH](https://www.ovh.com/fr/domaines/) pour ce coup-ci et c'est tout aussi simple, en plus de laisser mon argent en France.
+D'habitude j'utilise [Namecheap](https://www.namecheap.com/) pour mes noms de domaine, mais je voulais essayer [OVH](https://www.ovh.com/fr/domaines/) pour ce coup-ci et c'est tout aussi simple, en plus de laisser mon argent en France. 🇫🇷
 
 ## Administration serveur
 
-Pensez bien, si c'est votre première fois avec un VPS, à lire les pages de OVH partagées un peu plus haut. C'est important de sécuriser votre serveur !
+Pensez bien, si c'est votre première fois avec un VPS, à lire les pages de OVH partagées un peu plus haut. C'est important de sécuriser votre serveur ! 🐧
 
 ### Sécurisation initiale
 
+> Vous ne gérez pas un serveur pour la première fois ? Fuyez donc ce pragraphe et sautez au prochain ! 🤾
+
 Un VPS tout frais chez OVH a un compte initial, _ubuntu_, avec des privilèges sudo.
 
-Je commence par appliquer les mises-à-jour :
+Je commence par appliquer les mise-à-jour :
 
 ```
 sudo apt-get update
 sudo apt-get upgrade
 ```
 
-Ensuite, je modifie le mot de passe pour \_ubuntu :
+Ensuite, je modifie le mot de passe pour _ubuntu_ :
 
 ```
 sudo passwd
@@ -152,13 +154,7 @@ Depuis ma machine, j'upload une clé SSH avec [ssh-copy-id](https://www.ssh.com/
 ssh-copy-id -i ~/.ssh/ma-cle.pub compte-moins-de-privileges@ip-serveur
 ```
 
-Redémarrage du service SSH
-
-```
-sudo /etc/init.d/ssh restart
-```
-
-Sur ma machine, je configure `~/.ssh/config` en rajoutant ceci :
+Sur ma machine encore, je configure `~/.ssh/config` en rajoutant ceci :
 
 ```
 Host [IP du serveur]
@@ -171,6 +167,12 @@ J'ai même ajouté un alias à mon `.zshrc` histoire de :
 
 ```
 alias cossh='ssh compte-moins-privilèges@serveur'
+```
+
+Alors, je peux redémarrer le service SSH de mon serveur.
+
+```
+sudo /etc/init.d/ssh restart
 ```
 
 Et pour terminer, j'installe fail2ban :
@@ -194,7 +196,7 @@ sudo apt-get install nodejs npm nginx
 sudo npm i -g pm2
 ```
 
-Avant de configurer nginx, je copie son fichier de configuration au cas où je doive y revenir :
+Avant de configurer nginx, je duplique son fichier de configuration au cas où :
 
 ```
 sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/default-copy
@@ -216,6 +218,25 @@ server {
     proxy_cache_bypass $http_upgrade;
   }
 }
+```
+
+Pour terminer la gestion de nginx :
+
+```
+# Vérifier que le fichier de configuration est OK
+sudo nginx -t
+
+# Redémarrer nginx
+sudo /etc/init.d/nginx restart
+```
+
+Maintenant je configure mon pare-feu avec [ufw](https://doc.ubuntu-fr.org/ufw) :
+
+```
+sudo ufw allow Nginx\ HTTPS
+sudo ufw allow Nginx\ HTTP
+sudo ufw allow OpenSSH
+sudo ufw enable
 ```
 
 Je télécharge et j'installe les dépendances de mon blog dans le _home_ de _ubuntu_, l'endroit importe peu ici.
