@@ -158,6 +158,21 @@ Redémarrage du service SSH
 sudo /etc/init.d/ssh restart
 ```
 
+Sur ma machine, je configure `~/.ssh/config` en rajoutant ceci :
+
+```
+Host [IP du serveur]
+  Preferredauthentications publickey
+  IdentityFile ~/.ssh/[clé SSH]
+  Port 67
+```
+
+J'ai même ajouté un alias à mon `.zshrc` histoire de :
+
+```
+alias cossh='ssh compte-moins-privilèges@serveur'
+```
+
 Et pour terminer, j'installe fail2ban :
 
 ```
@@ -176,7 +191,7 @@ Avant tout j'installe quelques paquets :
 
 ```
 sudo apt-get install nodejs npm nginx
-npm i -g pm2
+sudo npm i -g pm2
 ```
 
 Avant de configurer nginx, je copie son fichier de configuration au cas où je doive y revenir :
@@ -203,9 +218,19 @@ server {
 }
 ```
 
+Je télécharge et j'installe les dépendances de mon blog dans le _home_ de _ubuntu_, l'endroit importe peu ici.
+
+```
+cd
+git clone https://github.com/tobudim/next-blog
+cd next-blog
+sudo npm i
+```
+
 Enfin, pour lancer notre serveur avec pm2 :
 
 ```
+npm run build
 pm2 start npm -- start
 pm2 startup
 ```
