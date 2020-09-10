@@ -256,6 +256,18 @@ pm2 start npm -- start --watch
 pm2 startup
 ```
 
+### Mettre à jour le blog
+
+Rien de plus simple !
+
+```
+cd ~/next-blog
+git pull
+npm run build
+```
+
+Et c'est tout ! ⚡️
+
 ## Améliorations
 
 Je réalise ce site un peu dans l'urgence pour montrer un peu de mes compétences. Des mises à jour sont à prévoir :
