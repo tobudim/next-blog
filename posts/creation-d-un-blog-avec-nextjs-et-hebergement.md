@@ -248,11 +248,11 @@ cd next-blog
 sudo npm i
 ```
 
-Enfin, pour lancer notre serveur avec pm2 :
+Enfin, pour lancer notre serveur avec [pm2](https://pm2.keymetrics.io/docs/usage/quick-start/) :
 
 ```
 npm run build
-pm2 start npm -- start --watch
+pm2 start npm --watch -- start
 pm2 startup
 ```
 
