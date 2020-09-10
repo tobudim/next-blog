@@ -13,7 +13,7 @@ Les temps ont changé, Internet est devenu le centre de gravité de l'éthique d
 
 J'ai envie de créer un petit blog, humble et utile. Faire tourner tout un Wordpress pour si peu serait dommage ! Tout ce dont j'ai envie, c'est balancer en ligne des idées, et le faire sans pister mes lecteurs. Et puis j'aimerais que ce soit rapide et minimaliste : pas besoin de suivre combien consultent mon blog, pas besoin de commentaires à mes articles. Juste des idées.
 
-> [Le code source de ce blog est disponible sur GitHub](https://signal.eu.org/blog/2020/07/15/la-sobriete-numerique-oui-mais-pour-quoi-faire/).
+> [Le code source de ce blog est disponible sur GitHub](https://github.com/tobudim/next-blog/tree/1.0.0).
 
 ## De quoi ai-je besoin ?
 
@@ -32,7 +32,7 @@ Et pour un peu plus tard je garde la génération d'un flux RSS.
 
 ## Code source
 
-Si mes besoins vous conviennent vous pouvez retrouver [le code source de ce blog sur GitHub](https://github.com/tobudim).
+Si mes besoins vous conviennent vous pouvez retrouver [le code source de ce blog sur GitHub](https://github.com/tobudim/next-blog/tree/1.0.0).
 
 Ce code sera amené à évoluer, quand j'aurais le temps et l'envie. 👨‍💻
 
@@ -275,4 +275,6 @@ Je réalise ce site un peu dans l'urgence pour montrer un peu de mes compétence
 - Le design, pour rester sobre mais avec une identité plus marquée.
 - Générer un flux RSS.
 
-[Les mises à jour seront disponibles sur GitHub](https://github.com/tobudim) pour ceux qui voudront travailler à partir de cette réalisation.
+[Les mises à jour seront disponibles sur GitHub](https://github.com/tobudim/next-blog/tree/1.0.0) pour ceux qui voudront travailler à partir de cette réalisation.
+
+Si vous avez des recommandations ou des conseils je suis preneur. 🙏
