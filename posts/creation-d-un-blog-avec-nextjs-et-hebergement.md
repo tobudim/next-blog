@@ -103,20 +103,105 @@ D'habitude j'utilise [Namecheap](https://www.namecheap.com/) pour mes noms de do
 
 ## Administration serveur
 
-Pensez bien, si c'est votre première fois avec un VPS, à lire les pages de OVH partagées un peu plus haut. C'est important de sécuriser votre serveur ! Grâce à cette aide vous pourrez désactiver la connexion SSH par mot de passe, désactiver la connexion root, et paramétrer votre pare-feu (`ufw` avec Ubuntu).
+Pensez bien, si c'est votre première fois avec un VPS, à lire les pages de OVH partagées un peu plus haut. C'est important de sécuriser votre serveur !
 
-Pour utiliser le protocole HTTPS, je passe directement par OVH qui [propose de tout gérer pour nous](https://www.ovh.com/fr/ssl-gateway/).
+### Sécurisation initiale
 
-Quelques mises à jour et installations avant de continuer :
+Un VPS tout frais chez OVH a un compte initial, _ubuntu_, avec des privilèges sudo.
+
+Je commence par appliquer les mises-à-jour :
 
 ```
 sudo apt-get update
 sudo apt-get upgrade
-sudo apt install fail2ban nodejs npm nginx
+```
+
+Ensuite, je modifie le mot de passe pour \_ubuntu :
+
+```
+sudo passwd
+```
+
+Je modifie le mot de passe _root_ et je créé un compte avec moins de privilèges, le seul à partir duquel je pourrais me connecter en SSH.
+
+```
+su root
+sudo passwd
+exit
+sudo adduser compte-moins-de-privileges
+```
+
+Il faut alors configurer le SSH :
+
+```
+sudo vim /etc/ssh/sshd_config
+```
+
+Mes modifications :
+
+```
+Port 67
+PermitRootLogin no
+PubkeyAuthentication yes
+PasswordAuthentication no
+```
+
+Depuis ma machine, j'upload une clé SSH avec [ssh-copy-id](https://www.ssh.com/ssh/copy-id) plutôt qu'en la copiant-collant.
+
+```
+ssh-copy-id -i ~/.ssh/ma-cle.pub compte-moins-de-privileges@ip-serveur
+```
+
+Redémarrage du service SSH
+
+```
+sudo /etc/init.d/ssh restart
+```
+
+Et pour terminer, j'installe fail2ban :
+
+```
+sudo apt-get install fail2ban
+```
+
+Je configurerai le pare-feu `ufw` plus tard, lorsque j'installerai et configurerai nginx.
+
+### HTTPS
+
+Pour utiliser le protocole HTTPS, je passe directement par OVH qui [propose de tout gérer pour nous](https://www.ovh.com/fr/ssl-gateway/).
+
+### Mise en place du blog
+
+Avant tout j'installe quelques paquets :
+
+```
+sudo apt-get install nodejs npm nginx
 npm i -g pm2
 ```
 
-Je n'ai pas modifié le fichier de configuration de fail2ban, n'hésitez pas à lire leur doc si vous ne connaissez pas !
+Avant de configurer nginx, je copie son fichier de configuration au cas où je doive y revenir :
+
+```
+sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/default-copy
+sudo vim /etc/nginx/sites-available/default
+```
+
+Mes modifications :
+
+```
+server {
+  server_name [nom de domaine]
+
+  location / {
+    proxy_pass http://localhost:3000;
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection 'upgrade';
+    proxy_set_header Host $host;
+    proxy_cache_bypass $http_upgrade;
+  }
+}
+```
 
 Enfin, pour lancer notre serveur avec pm2 :
 
