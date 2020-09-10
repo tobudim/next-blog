@@ -252,7 +252,7 @@ Enfin, pour lancer notre serveur avec pm2 :
 
 ```
 npm run build
-pm2 start npm -- start
+pm2 start npm -- start --watch
 pm2 startup
 ```
 
