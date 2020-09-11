@@ -235,7 +235,7 @@ Maintenant je configure mon pare-feu avec [ufw](https://doc.ubuntu-fr.org/ufw) :
 ```
 sudo ufw allow Nginx\ HTTPS
 sudo ufw allow Nginx\ HTTP
-sudo ufw allow OpenSSH
+sudo ufw allow [N° de port pour votre connexion SSH]
 sudo ufw enable
 ```
 
