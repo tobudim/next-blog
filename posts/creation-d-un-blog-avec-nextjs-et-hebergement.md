@@ -239,13 +239,13 @@ sudo ufw allow [N° de port pour votre connexion SSH]
 sudo ufw enable
 ```
 
-Je télécharge et j'installe les dépendances de mon blog dans le _home_ de _ubuntu_, l'endroit importe peu ici.
+Je télécharge et j'installe les dépendances de mon blog dans le _home_ de mon compte sans privilèges _sudo_, l'endroit importe peu ici.
 
 ```
 cd
 git clone https://github.com/tobudim/next-blog
 cd next-blog
-sudo npm i
+npm i
 ```
 
 Enfin, pour lancer notre serveur avec [pm2](https://pm2.keymetrics.io/docs/usage/quick-start/) :
