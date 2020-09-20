@@ -21,6 +21,10 @@ date: "2020-09-20"
 
 > Privacy Redirect a pour but de vous protéger de Twitter, Instagram, Google Maps et YouTube en redirigeant toutes les requêtes qui leur sont adressées vers des services libres et alternatifs comme Nitter, Invidious, Bibliogram, OpenStreetMap. Mais cela vous permet aussi de profiter de ces services sans rencontrer les problèmes de bulles ou de recommandations biaisées proposés par les algorithmes.
 
+[ États-Unis : 400 000 inscriptions sur les listes électorales grâce à Snapchat ](https://usbeketrica.com/fr/article/etats-unis-400-000-inscriptions-sur-les-listes-electorales-grace-a-snapchat)
+
+> Aux États-Unis, le réseau social Snapchat vient de déployer certaines fonctionnalités pour inciter ses utilisateurs à voter le 3 novembre prochain. En quelques jours, plus de 400 000 personnes se sont inscrites sur les listes électorales directement via l’application.
+
 ## JS
 
 [The Post-MomentJS Era](https://yarmo.eu/post/post-momentjs-era)
@@ -53,6 +57,13 @@ date: "2020-09-20"
 > - Call the GitHub API to script nearly any action, and set a custom alias for any command
 > - Connect to GitHub Enterprise Server in addition to GitHub.com
 
+[Docker : La jungle des images](https://www.grottedubarbu.fr/docker-hub-jungle-images/)
+
+> Un utilisateur souhaite utiliser une image du Docker Hub,
+> Cette image se base sur une autre image ...
+> Mais celle-ci n'est pas à jour car elle se base "encore" sous alpine 3.6 qui n'est plus maintenue depuis le 01 Mai 2019 :
+> Problématique qui met en avant les problèmes de sécurité.
+
 ## Écologie 🌱
 
 [« Les SUV sont des machines à tuer »](https://usbeketrica.com/article/les-suv-sont-des-machines-a-tuer)
@@ -69,4 +80,4 @@ date: "2020-09-20"
 
 > Parmi les théories sur l’apparition de la vie sur Terre, il y a celle de la panspermie, où des formes microscopiques de vie auraient été dispersées dans l’espace interplanétaire, par exemple par des astéroïdes, et ainsi auraient semé la vie d’une planète à une autre.
 
-- [Téléphoner avec un chat ? - Espèces de célébrités- SHOT DE CURIOSITÉ 🎬](https://www.youtube.com/watch?v=01JHQcGldY8)
+[Téléphoner avec un chat ? - Espèces de célébrités- SHOT DE CURIOSITÉ 🎬](https://www.youtube.com/watch?v=01JHQcGldY8)
