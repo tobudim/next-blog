@@ -10,7 +10,7 @@ body {
 }
 
 a {
-  color: inherit;
+  color: #c37f5c;
   text-decoration: none;
   border-bottom: 5px solid transparent;
   transition: 0.3s;
