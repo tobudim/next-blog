@@ -16,7 +16,7 @@ export default function Home({ intro }) {
   return (
     <Layout home>
       <Head>
-        <title>Dimitri Bourreau : Développeur front-end</title>
+        <title>Dimitri Bourreau : Développeur</title>
       </Head>
 
       <div dangerouslySetInnerHTML={{ __html: intro.contentHtml }} />
