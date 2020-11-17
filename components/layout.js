@@ -11,14 +11,8 @@ export default function Layout({ children, home, blogPost }) {
     <div className={styles.container}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
-        <meta
-          name="description"
-          content="Dimitri Bourreau : développeur front-end"
-        />
-        <meta
-          name="og:title"
-          content="Dimitri Bourreau : Développeur front-end"
-        />
+        <meta name="description" content="Dimitri Bourreau : développeur" />
+        <meta name="og:title" content="Dimitri Bourreau : Développeur" />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
@@ -50,7 +44,7 @@ export default function Layout({ children, home, blogPost }) {
               className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
               alt={name}
             />
-            <h2>Dimitri : développeur Bordelais</h2>
+            <h3>Dimitri, développeur freelance</h3>
           </>
         )}
       </header>
