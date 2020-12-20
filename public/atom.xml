@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://dimitribourreau.me</id>
+    <title>Dimitri Bourreau : Développeur</title>
+    <updated>2020-12-20T15:46:59.502Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://dimitribourreau.me"/>
+    <subtitle>Dimitri Bourreau : Développeur</subtitle>
+    <rights>Dimitri Bourreau</rights>
+</feed>
