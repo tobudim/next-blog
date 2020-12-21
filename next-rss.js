@@ -5,5 +5,5 @@ module.exports = {
   siteCopyright: "Dimitri Bourreau",
   siteUrl: "https://dimitribourreau.me",
   outDir: "public",
-  postsDir: "posts",
+  postsDir: "blog",
 };
