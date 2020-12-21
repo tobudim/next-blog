@@ -55,3 +55,10 @@
 .divider {
 	margin: 35px 0;
 }
+
+.rssLink {
+	font-size: 0.4em;
+	text-transform: uppercase;
+	float:right;
+	line-height: 4em;
+}

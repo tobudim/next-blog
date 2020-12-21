@@ -19,7 +19,15 @@ export default function Home({ yearSortedPosts }) {
       </Head>
 
       <section className={utilStyles.headingMd}>
-        <h2>Blog de Dimitri Bourreau</h2>
+        <h2>
+          Blog de Dimitri Bourreau{" "}
+          <a
+            className={utilStyles.rssLink}
+            href="https://dimitribourreau.me/rss.xml"
+          >
+            Flux RSS
+          </a>
+        </h2>
         <p>Indépendance numérique, programmation et partage.</p>
       </section>
 
@@ -49,7 +57,7 @@ export default function Home({ yearSortedPosts }) {
         <hr className={utilStyles.divider} />
         <small className={utilStyles.lightText}>
           Ce blog, fièrement, ni ne vous traque, ni ne transmet votre visite et
-          ses détails aux GAFAM.
+          ses détails à quiconque.
         </small>
       </section>
     </Layout>
