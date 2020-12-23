@@ -6,4 +6,4 @@ Aujourd'hui j'aide des projets à grandir, j'accompagne des entreprises à concr
 
 ---
 
-[github](https://github.com/tobudim) ✨ [malt](https://www.malt.fr/profile/dimitribourreau) ✨ [linkedin](https://www.linkedin.com/in/dimitri-bourreau-😊-94a4b3151/)
+[github](https://github.com/dimitri-bourreau) ✨ [malt](https://www.malt.fr/profile/dimitribourreau) ✨ [linkedin](https://www.linkedin.com/in/dimitri-bourreau-😊-94a4b3151/)
